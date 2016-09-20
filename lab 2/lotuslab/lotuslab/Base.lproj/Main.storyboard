@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lotuslab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fSF-q2-AGU">
+                                <rect key="frame" x="240" y="256" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="JvP-sr-GH1"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="picture"/>
+                                    <segment title="painting"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeStuff:" destination="BYZ-38-t0r" eventType="valueChanged" id="kyU-3I-LFD"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lotus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUp-Qv-6Kc">
+                                <rect key="frame" x="263" y="207" width="74" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="font size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWf-CR-TBJ">
+                                <rect key="frame" x="268" y="303" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="18" minValue="7" maxValue="23" translatesAutoresizingMaskIntoConstraints="NO" id="p7s-jP-fIQ">
+                                <rect key="frame" x="241" y="332" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="gG6-ka-FkL"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeFontSize:" destination="BYZ-38-t0r" eventType="valueChanged" id="5kQ-lD-YT9"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="capitalization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c15-gP-XXJ">
+                                <rect key="frame" x="250" y="372" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="343" y="205" width="101" height="21"/>
+                                </variation>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="90R-bO-3gs">
+                                <rect key="frame" x="466" y="201" width="51" height="31"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="369" y="245" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="updateFont:" destination="BYZ-38-t0r" eventType="valueChanged" id="8jG-Og-Uuu"/>
+                                </connections>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="TDP-fn-7lj">
+                                <rect key="frame" x="132" y="41" width="336" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="336" id="AAD-fJ-J3q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TDP-fn-7lj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="0dn-AH-N1S">
+                                <variation key="heightClass=compact" constant="-2"/>
+                            </constraint>
+                            <constraint firstItem="uWf-CR-TBJ" firstAttribute="centerX" secondItem="p7s-jP-fIQ" secondAttribute="centerX" id="1Gi-Rl-65q"/>
+                            <constraint firstItem="uWf-CR-TBJ" firstAttribute="top" secondItem="fSF-q2-AGU" secondAttribute="bottom" constant="19" id="43e-Dq-2VP">
+                                <variation key="heightClass=compact" constant="-165"/>
+                            </constraint>
+                            <constraint firstItem="fSF-q2-AGU" firstAttribute="top" secondItem="mUp-Qv-6Kc" secondAttribute="bottom" constant="8" symbolic="YES" id="8r7-pa-L6L">
+                                <variation key="heightClass=compact" constant="19"/>
+                            </constraint>
+                            <constraint firstItem="fSF-q2-AGU" firstAttribute="top" secondItem="TDP-fn-7lj" secondAttribute="bottom" constant="36" id="FcM-zu-GWu">
+                                <variation key="heightClass=compact" constant="58"/>
+                            </constraint>
+                            <constraint firstItem="mUp-Qv-6Kc" firstAttribute="centerX" secondItem="fSF-q2-AGU" secondAttribute="centerX" id="Iaj-T3-f7p"/>
+                            <constraint firstItem="TDP-fn-7lj" firstAttribute="centerX" secondItem="mUp-Qv-6Kc" secondAttribute="centerX" id="RCi-pG-YE9"/>
+                            <constraint firstItem="p7s-jP-fIQ" firstAttribute="centerX" secondItem="c15-gP-XXJ" secondAttribute="centerX" id="bYQ-BG-r0x"/>
+                            <constraint firstItem="c15-gP-XXJ" firstAttribute="top" secondItem="p7s-jP-fIQ" secondAttribute="bottom" constant="10" id="lKo-bx-Wbx"/>
+                            <constraint firstItem="c15-gP-XXJ" firstAttribute="centerX" secondItem="90R-bO-3gs" secondAttribute="centerX" id="oaa-P6-Q00"/>
+                            <constraint firstItem="TDP-fn-7lj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="psm-AG-Zq4"/>
+                            <constraint firstItem="p7s-jP-fIQ" firstAttribute="top" secondItem="uWf-CR-TBJ" secondAttribute="bottom" constant="8" symbolic="YES" id="rHC-Y1-xAG">
+                                <variation key="heightClass=compact" constant="12"/>
+                            </constraint>
+                            <constraint firstItem="TDP-fn-7lj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="tWy-DP-R5q"/>
+                            <constraint firstItem="fSF-q2-AGU" firstAttribute="centerX" secondItem="uWf-CR-TBJ" secondAttribute="centerX" id="v7J-zS-Dju">
+                                <variation key="heightClass=compact" constant="-192"/>
+                            </constraint>
+                            <constraint firstItem="mUp-Qv-6Kc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="187" id="v8O-0R-8ex">
+                                <variation key="heightClass=compact" constant="175"/>
+                            </constraint>
+                            <constraint firstItem="90R-bO-3gs" firstAttribute="top" secondItem="c15-gP-XXJ" secondAttribute="bottom" constant="8" symbolic="YES" id="vvP-IJ-ATa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tWy-DP-R5q"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="psm-AG-Zq4"/>
+                                <include reference="tWy-DP-R5q"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="ImageControl" destination="fSF-q2-AGU" id="TRZ-x7-RTm"/>
+                        <outlet property="capitalSwitch" destination="90R-bO-3gs" id="GED-7Y-otw"/>
+                        <outlet property="fontSizeLabel" destination="uWf-CR-TBJ" id="YzI-Gs-UMt"/>
+                        <outlet property="lotusImage" destination="TDP-fn-7lj" id="c2k-T2-g3D"/>
+                        <outlet property="lotusLabel" destination="mUp-Qv-6Kc" id="xNB-or-1yv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27" y="324"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blue" width="133" height="133"/>
+    </resources>
+</document>
