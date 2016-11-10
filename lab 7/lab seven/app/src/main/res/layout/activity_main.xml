@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="atlas.labsev.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/name_edit"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/nameEditText" />
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/crust"
+        android:layout_below="@+id/nameEditText"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/spinner" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sauceRadioGroup"
+        android:text="@string/sauce"
+        >
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton1"
+            android:text="@string/red"
+            />
+
+        <RadioButton
+            android:text="@string/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2" />
+
+        <RadioButton
+            android:text="@string/no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton3" />
+    </RadioGroup>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sauceRadioGroup"
+        android:id="@+id/table_check">
+
+        <TableRow>
+
+            <CheckBox
+                android:text="@string/vs_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:id="@+id/checkBox1"
+                android:layout_marginStart="40dp"/>
+
+            <CheckBox
+                android:text="@string/m_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:id="@+id/checkBox2"
+                android:layout_marginStart="40dp"/>
+
+        </TableRow>
+        <TableRow>
+
+            <CheckBox
+                android:text="@string/v_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox4"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="40dp"/>
+
+            <CheckBox
+                android:text="@string/no_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox3"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="40dp"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/table_check"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:id="@+id/linear1">
+
+        <Switch
+            android:text="@string/delivery_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch1" />
+
+        <Button
+            android:text="@string/order_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/button"
+            android:onClick="makePizza"
+             />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/gimmepizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:id="@+id/pizzaTextView" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/piz1"
+        android:layout_above="@+id/pizzaTextView"
+        android:layout_below="@+id/linear1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:id="@+id/imageView3" />
+
+</RelativeLayout>
