@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab1_books" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="book-cover" translatesAutoresizingMaskIntoConstraints="NO" id="Izg-5A-IDl">
+                                <rect key="frame" x="0.0" y="177" width="600" height="367"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="books" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xG5-qO-HLZ">
+                                <rect key="frame" x="277" y="43" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="Lb4-XA-9X6">
+                                <rect key="frame" x="162" y="149" width="233" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNo-Zw-qTg">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                        <state key="normal" title="poetry"/>
+                                        <connections>
+                                            <action selector="choseComic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MHL-1a-ZNA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApD-aU-bnV">
+                                        <rect key="frame" x="191" y="0.0" width="42" height="30"/>
+                                        <state key="normal" title="comic"/>
+                                        <connections>
+                                            <action selector="choseComic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="noG-CE-psf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lb4-XA-9X6" firstAttribute="leading" secondItem="xG5-qO-HLZ" secondAttribute="leading" id="8RT-5s-iCB"/>
+                            <constraint firstItem="Lb4-XA-9X6" firstAttribute="width" secondItem="xG5-qO-HLZ" secondAttribute="width" id="KdH-CW-uVc"/>
+                            <constraint firstItem="Lb4-XA-9X6" firstAttribute="top" secondItem="xG5-qO-HLZ" secondAttribute="top" constant="40" id="V2c-KL-kgM"/>
+                            <constraint firstItem="Izg-5A-IDl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="40" id="ajj-SH-ITg"/>
+                            <constraint firstItem="Izg-5A-IDl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bon-4M-Imq"/>
+                            <constraint firstItem="xG5-qO-HLZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fmh-Dz-YHV"/>
+                            <constraint firstItem="Izg-5A-IDl" firstAttribute="leading" secondItem="Lb4-XA-9X6" secondAttribute="leading" id="h2I-W5-RMr"/>
+                            <constraint firstItem="xG5-qO-HLZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="uIN-qT-ipL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bookImage" destination="Izg-5A-IDl" id="QMu-WF-fMh"/>
+                        <outlet property="booksLabel" destination="xG5-qO-HLZ" id="DEl-aJ-NVA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book-cover" width="233" height="166"/>
+    </resources>
+</document>
