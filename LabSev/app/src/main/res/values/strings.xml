@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">labseven</string>
+    <string name="name_edit">Name</string>
+    <string-array name="crust">
+        <item>Wheat Crust</item>
+        <item>Cheese Crust</item>
+        <item>Plain Crust</item>
+        <item>Stuffed Crust</item>
+    </string-array>
+    <string name="sauce">Sauce</string>
+    <string name="red">Red Sauce</string>
+    <string name="white">White Sauce</string>
+    <string name="no">None</string>
+    <string name="m_check">Meat</string>
+    <string name="vs_check">Veggies</string>
+    <string name="no_check">Plain</string>
+    <string name="v_check">Vegan</string>
+    <string name="delivery_switch">Delivery?</string>
+    <string name="order_button">Order</string>
+</resources>
