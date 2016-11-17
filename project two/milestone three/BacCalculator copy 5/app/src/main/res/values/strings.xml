@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">buzzed — bac calculator</string>
+    <string name="title">BUZZED</string>
+    <string name="weight">weight</string>
+    <string name="button">calculate</string>
+    <string name="button2">see more</string>
+    <string name="about">"?"</string>
+    <string name="hourhint">0 hours</string>
+    <string name="drink">Wine</string>
+    <string name="drink2">Beer</string>
+    <string name="drink3">Liquor</string>
+    <string name="spent">Hours Spent Drinking</string>
+    <string name="since">Hours Since Drinking</string>
+    <string-array name="gender">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+    <string name="bactext">0.0</string>
+    <string name="bacl">Your Current BAC Is:</string>
+    <string name="hr1">You Will Be Sober In:</string>
+    <string name="hr2">Your BAC Will Be Below 0.08 In: </string>
+    <string name="info">Blood Alcohol Content or BAC is a measurement of the amount of alcohol present in the bloodstream after drinking. This application uses the Widmark Formula. This formula gives a rough BAC estimate but other factors such as how often a person drinks and if they had eaten before drinking can also affect the BAC. This calculation is only an estimate — Do not drive while intoxicated!
+</string>
+
+</resources>
