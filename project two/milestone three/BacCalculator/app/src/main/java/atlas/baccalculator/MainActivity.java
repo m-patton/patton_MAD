@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                findBAC();
                 String info = bactext.getText().toString();
                 Intent i = new Intent("second_filter");
                 Bundle bundle = new Bundle();
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void findBAC(View view) {
+    public void findBAC() {
         double r = 1;
 
         //GENDER
