@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">labeight</string>
+    <string name="title">Food Finder</string>
+    <string name="food_type">What do you have a taste for?</string>
+    <string name="button">Find Food</string>
+    <string-array name="food">
+        <item>breakfast</item>
+        <item>sushi</item>
+        <item>burgers</item>
+        <item>mexican</item>
+        <item>sandwich</item>
+    </string-array>
+    <string name="food_image">food</string>
+    <string name="suggested_food">This is where you should eat:</string>
+</resources>
