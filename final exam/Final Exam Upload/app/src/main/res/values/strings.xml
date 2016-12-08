@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">final exam</string>
+    <string name="title2">You should try out this place</string>
+    <string name="treat_edit">treat</string>
+    <string name="title">ice cream is the best!</string>
+    <string name="treat_button">treat me</string>
+    <string name="treat"></string>
+    <string-array name="flavors">
+        <item>salted caramel</item>
+        <item>death by chocolate</item>
+        <item>cookies and cream</item>
+    </string-array>
+    <string name="toggle_on">cup</string>
+    <string name="toggle_off">cone</string>
+    <string name="dairy_switch">dairy-free</string>
+    <string name="cream">ice cream</string>
+    <string name="yogurt">frozen yogurt</string>
+    <string name="gelato">gelato</string>
+    <string name="sprinkles">sprinkles</string>
+    <string name="fudge">hot fudge</string>
+    <string name="nuts">nuts</string>
+    <string name="find_button">find treat</string>
+
+</resources>
