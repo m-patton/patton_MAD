@@ -36,8 +36,6 @@ class Information : UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         }
     }
     
-    //let myDefaults = NSUserDefaults.standardUserDefaults()
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -72,14 +70,6 @@ class Information : UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         
         nameField.delegate = self
         
-        /*
-        let myName = userName.text
-        NSUserDefaults.standardUserDefaults().setObject(myName, forKey: "savedName")
-        let myWeight = userWeight.text
-        NSUserDefaults.standardUserDefaults().setInteger(wArray[selectedRow], forKey: "savedWeight")
-        let myGender = userGender.text
-        NSUserDefaults.standardUserDefaults().setObject(myGender, forKey: "savedGender")*/
-        
         let nameKey = NSUserDefaults.standardUserDefaults()
         userName.text = nameKey.stringForKey("savedName")
         nameField.text = nameKey.stringForKey("savedName")
@@ -93,14 +83,10 @@ class Information : UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         if let row = wArray.indexOf(saveWeight) {
             WeightPicker.selectRow(row, inComponent: 0, animated: false)
         }
-        //navigationController!.navigationBar.barTintColor = UIColor.blackColor()
-        //UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        //let fontSize = "\(wArray[row])".font.pointSize
-        //cell.textLabel?.font = UIFont(name: "Avenir", size: fontSize!)
+
         return "\(wArray[row])"
     }
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {

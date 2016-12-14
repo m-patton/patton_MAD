@@ -2,7 +2,7 @@
 //  Bcalc.swift
 //  bac_final
 //
-//  Created by Mae Patton on 12/11/16.
+//  Created by Mae Patton on 12/10/16.
 //  Copyright © 2016 Mae Patton. All rights reserved.
 //
 
@@ -35,7 +35,6 @@ class Bcalc : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     
     @IBOutlet weak var tempOutputLabel: UILabel!
-    
     @IBOutlet weak var Open: UIBarButtonItem!
     
     
@@ -46,12 +45,12 @@ class Bcalc : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var myLabel: UILabel!
     
     override func viewDidLoad() {
-        
+        //button to open up side bar
         Open.target = self.revealViewController()
         Open.action = #selector(SWRevealViewController.revealToggle(_:))
         Open1.target = self.revealViewController()
         Open1.action = #selector(SWRevealViewController.revealToggle(_:))
-
+        //gesture recognizer to open side bar
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         winePicker.dataSource = self
@@ -60,8 +59,6 @@ class Bcalc : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         beerPicker.delegate = self
         liqPicker.dataSource = self
         liqPicker.delegate = self
-        
-        
         
         //THIS PASSES THE DATA FROM INFO!
         let nameKey = NSUserDefaults.standardUserDefaults()
@@ -96,10 +93,6 @@ class Bcalc : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         
     }
     
-    //winePicker.addTarget(self, action: #selector(Bcalc.calcBAC), forControlEvents: UIControlEvents.ValueChanged)
-    
-    //[winePicker.addTarget:self action:@selector(calcBAC) forControlEvents:UIControlEventValueChanged];
-    
     @IBAction func spentValueChange(sender: UIStepper) {
         spentLabel.text = Int(sender.value).description
         calcBAC()
@@ -109,19 +102,8 @@ class Bcalc : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         calcBAC()
     }
     
-    //function to get hours
-    /*@IBAction func sinceValueChange(sender: UIStepper) {
-        since.text = Int(sender.value).description
-        calcBAC()
-     }
-     @IBAction func spentValueChange(sender: UIStepper) {
-        spentLabel.text = Int(sender.value).description
-        calcBAC()
-     }*/
-    
     func calcBAC(){
         //get weight in grams
-        //let weight = Float(weightTest.text!)
         let nweight = Float(weight)
         let gweight = 453.592 * nweight!
         //get gender r value
@@ -132,7 +114,6 @@ class Bcalc : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         else if gender == "Male" {
             rVal = 0.68 * gweight
         }
-        //genderTest.text = String(rVal)
         
         let wineDrinks = winePicker.selectedRowInComponent(0)
         
@@ -155,37 +136,14 @@ class Bcalc : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         }
         
         
-        
         tempOutputLabel.text = String(finalBAC)
-
         
         //Alcohol in grams / rVal * 100
-        
         // (Volume of drinks) x (AC of drinks) x 0.789 = grams of alcohol consumed
-        
-        //The standard drink size of an 80-proof version of a liqueur such as gin or whiskey is approximately 1.5 ounces.[2] This is about forty percent alcohol.
-        //The standard drink size of a beer with a five percent volume of alcohol is twelve ounces.
-        //The standard drink size of a wine with a twelve percent volume of alcohol is five ounces.
-        //wine
-        //5 x 29.5735 x 0.12 x .789 ≈ 14 grams of alcohol
-        //Beer:
-        //12 x 29.5735 x 0.05 x .789 ≈ 14 grams of alcohol
-        //Liquor:
-        //If 80 proof is defined as 40% alcohol by volume:
-        //1.5 x 29.5735 x 0.40 x .789 ≈ 14 grams of alcohol
-        
-        
+        //wine: 5 x 29.5735 x 0.12 x .789 ≈ 14 grams of alcohol
+        //beer: 12 x 29.5735 x 0.05 x .789 ≈ 14 grams of alcohol
+        //liquor: 1.5 x 29.5735 x 0.40 x .789 ≈ 14 grams of alcohol
     }
-    
-    
-    /*
-     @IBAction func scanButton (sender: UIButton!) {
-     
-     performSegueWithIdentifier("nextView", sender: self)
-     
-     }
-     
-     */
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
         //return drinkArray.count
@@ -239,26 +197,13 @@ class Bcalc : UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBAction func unwindSegue(segue:UIStoryboardSegue){
         
     }
-   
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //destViewController.LabelText = baclabel.text
         
         if (segue.identifier == "updatebac") {
             var dvc : BacView = segue.destinationViewController as! BacView
-            //var svc = segue!.destinationViewController as! BACView
-            
             dvc.bacText = tempOutputLabel.text
-            
         }
     }
-    
-    
-
-
-    
-    
-  
 }
-
-//var user = Info(name: "Name", gender: "Female", weight: 150, state: "Colorado" )

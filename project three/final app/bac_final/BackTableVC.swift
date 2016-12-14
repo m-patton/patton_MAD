@@ -32,10 +32,7 @@ class BackTableVC: UITableViewController{
         let fontSize = cell.textLabel?.font.pointSize
         cell.textLabel?.font = UIFont(name: "Avenir", size: fontSize!)
         
-        //cell.textLabel?.font =
-        
         return cell
     }
-    //myCell.customLabel.textColor = UIColor.redColor()
     
 }
